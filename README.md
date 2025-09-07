@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# Full-Stack TypeScript Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional-grade full-stack application boilerplate with React (TypeScript) frontend.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+- **React** with TypeScript
+- **Vite** for build tooling
+- **Tailwind CSS** for styling
+- **Axios** for API calls
+- **React Router** for navigation
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+├── frontend/         # React frontend
+└── README.md         # This file
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone and Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/zainbinshakoor/PERN-BOILER-FE.git
+cd pern-boiler-fe
+
+# Install dependencies for both frontend and backend
+npm install
 ```
+
+### 3. Environment Variables
+
+#### Frontend (.env)
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+### 4. Development
+
+```bash
+# Start both frontend and backend in development mode
+npm run dev
+
+# Or start individually:
+npm run dev  # Frontend only
+```
+
+### 5. Production
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+```
+
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start frontend
+- `npm run build` - Build both applications for production
+- `npm run test` - Run all tests
+- `npm run lint` - Lint all code
+- `npm run format` - Format code with Prettier
+
+## 🏗️ Architecture
+
+### Frontend Architecture
+- **Components**: Reusable UI components
+- **Pages**: Route-level components
+- **Services**: API communication layer
+- **Hooks**: Custom React hooks
+- **Utils**: Helper functions and utilities
+
+## 🔐 Authentication
+
+The boilerplate includes JWT-based authentication with:
+- User registration and login
+- Protected routes
+- Token refresh mechanism
+- Role-based access control
+
+## 🚀 Deployment
+
+### Frontend Deployment
+- Build the application
+- Serve static files
+- Configure environment variables
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
