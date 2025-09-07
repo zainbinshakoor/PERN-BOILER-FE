@@ -29,7 +29,7 @@ A professional-grade full-stack application boilerplate with React (TypeScript) 
 
 ```bash
 # Clone the repository
-git clone https://github.com/zainbinshakoor/PERN-BOILER-FE.git
+https://github.com/zainbinshakoor/pern-boiler-fe.git
 cd pern-boiler-fe
 
 # Install dependencies for both frontend and backend
